@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--com.github.abdularis.civ.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="170dp"
+        android:src="@drawable/avatar_2"
+        app:highlightColor="#80fb1743"
+        app:strokeColor="@color/colorAccent"
+        app:strokeWidth="2px"/>
+
+    <com.github.abdularis.civ.CircleImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:src="@drawable/avatar_3"
+        android:onClick="onCircleImageClick"
+        app:strokeColor="@color/colorAccent"/-->
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/tvEmail"
+        app:layout_constraintStart_toEndOf="@+id/imgUser"
+        app:layout_constraintTop_toTopOf="@+id/imgUser" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="37dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="15dp"
+        android:text="Email"
+        app:layout_constraintBottom_toBottomOf="@+id/imgUser"
+        app:layout_constraintStart_toEndOf="@+id/imgUser" />
+
+    <!--ImageView
+        android:id="@+id/imgUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/avatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgUser"
+        android:layout_width="130dp"
+        android:layout_height="100dp"
+        android:src="@drawable/avatar"
+        app:civ_border_color="#3f51b5"
+        app:civ_border_width="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

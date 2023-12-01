@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?><!--layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"-->
+<!-- Hay que pasar el xml a dataBinding, desde la bombilla de arriba -->
+<!--data>
+
+    <variable
+        name="viewmodel"
+        type="com.jcasrui.articulos.ui.singin.usecase.SignInViewModel" />
+</data-->
+
+<!-- <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llSignIn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/llSignIn_padding"
+    tools:context=".ui.singin.SignInFragment"> -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.jcasrui.articulos.ui.singin.usecase.SignInViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/llSignIn_padding"
+        tools:context=".ui.singin.SignInFragment">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilEmailSignIn"
+            style="@style/SignInTextImputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="clear_text"
+            app:errorEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tieEmailSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tieEmailSignInHint"
+                android:text="@={viewmodel.email}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPasswordSignIn"
+            style="@style/SignInTextImputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconMode="password_toggle"
+            app:errorEnabled="true">
+            <!-- app:endIconMode -> iconos por defecto-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiePasswordSignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/tiePasswordSignInHint"
+                android:inputType="textPassword"
+                android:text="@={viewmodel.password}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/chxRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:text="Recordar" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnUserList"
+                style="@style/ButtomTransparent.TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="UserList" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnRegister"
+                style="@style/ButtomTransparent.TextColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:hint="Registrarse" />
+
+        </LinearLayout>
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLogin"
+            style="@style/ButtomTransparent.TextColor"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:onClick="@{()->viewmodel.validateCredentials()}"
+            android:text="@string/btnLogin" />
+
+        <TextView
+            android:id="@+id/tvOther"
+            style="@style/ItemTitleSmall"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="bottom|center_horizontal"
+            android:text="@string/tvOther" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/imgGoogle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/google3" />
+
+            <ImageButton
+                android:id="@+id/imgFacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/facebook" />
+        </LinearLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout><!--/layout-->

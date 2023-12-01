@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Articles</string>
+    <string name="tvTitle">Add Item</string>
+
+    <string name="ed_ArticleName">Article name</string>
+
+    <string name="tvOther">Sign in through other platforms</string>
+    <string name="tieEmailSignInHint">Email</string>
+    <string name="tiePasswordSignInHint">Password</string>
+    <string name="tieEmailSignUpHint">Email</string>
+    <string name="tiePasswordSignUpHint">Password</string>
+    <string name="tieConfirmPasswordSignUpHint">Confirm password</string>
+    <string name="tvTipo_text">Tipo</string>
+    <string name="tvProfile">Perfiles</string>
+    <string name="tvImportant_text">Calificación usuario</string>
+    <string name="btnLogin">Entrar</string>
+</resources>

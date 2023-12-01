@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "892178029609",
+    "project_id": "invoice-deint",
+    "storage_bucket": "invoice-deint.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892178029609:android:3006467b0d072606c3d038",
+        "android_client_info": {
+          "package_name": "com.jcasrui.articulos"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD96iNzBxQOscnoG7Li4D9WFQ0js1ATLWo"  /* Esta es mi api, el token de mi aplicacion */
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
